@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>َKidney Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/kidney_style.css') }}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+      <a class="navbar-brand" href="/"><a class="navbar-brand" href="/"><img style="width: 85px; margin-left: auto;margin-right: auto;" src="{{ url_for('static', filename = 'YaP.png') }}" >
+        </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"style="color: white;" href="{{ url_for('heartPrediction') }}">Heart Disease Prediction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="{{ url_for('diabetesPrediction') }}">Diabetes Predictiom</a>
+        </li>
+      </ul>
+    </nav>
+    
+<form class="box" action="{{ url_for('predictKidneyDisease') }}" method="post">
+  
+  <h3 style="color: white;">Kidney Disease Prediction</h3>
+  <input type="text" name="age" placeholder="Age of Patient">
+  <input type="text" name="bp" placeholder="blood pressure in mm/Hg">
+  <input type="text" name="al" placeholder="albumin(0,1,2,3,4,5)">
+  <input type="text" name="su" placeholder="sugar(0,1,2,3,4,5)">
+  <input type="text" name="rbc" placeholder="red blood cells(abnormal:1,normal: 0)">
+  <input type="text" name="pc" placeholder="pus cell(abnormal:1,normal: 0)">
+  <input type="text" name="pcc" placeholder="pus cell clumps(present:1,notpresent:0)">
+  <input type="text" name="ba" placeholder="bacteria(notpresent:0,present: 1)">
+  <input type="text" name="bgr" placeholder="blood glucose random in mgs/dl">
+  <input type="text" name="bu" placeholder="blood urea in mgs/dl">
+  <input type="text" name="sc" placeholder="serum creatinine in mgs/dl">
+  <input type="text" name="pot" placeholder="pottasium in mEq/L">
+  <input type="text" name="wc" placeholder="white blood cell count in cells/cumm">
+  <input type="text" name="htn" placeholder="hypertension(yes:1,no: 0)">
+  <input type="text" name="dm" placeholder="diabetes mellitus(yes:1,no:0)">
+  <input type="text" name="cad" placeholder="coronary artery disease(yes:1,no: 0)">
+  <input type="text" name="pe" placeholder="pedal edema(yes:1,no:0)">
+  <input type="text" name="ane" placeholder="anemia(yes:1,no:0)">
+
+
+  
+  <input type="submit"  name="" value="✅Check Report" >
+
+</form>
+
+
+
+
+  </body>
+</html>
