@@ -25,14 +25,14 @@
     </nav>
 <form class="box" action="{{ url_for('predictDiabetesDisease') }}" method="post">
   <h3 style="color: white;">Diabetes Prediction</h3>
-  <input type="text" name="pregnancies" placeholder="Pregnancies">
-  <input type="text" name="glucose" placeholder="Glucose">
-  <input type="text" name="bloodpressure" placeholder="BloodPressure">
-  <input type="text" name="skinthickness" placeholder="SkinThickness">
-  <input type="text" name="insulin" placeholder="Insulin">
-  <input type="text" name="bmi" placeholder="BMI">
-  <input type="text" name="dpf" placeholder="DiabetesPedigreeFunction">
-  <input type="text" name="age" placeholder="Age">
+  <input type="text" name="pregnancies" placeholder="Pregnancies" required="true">
+  <input type="text" name="glucose" placeholder="Glucose" required="true">
+  <input type="text" name="bloodpressure" placeholder="BloodPressure" required="true">
+  <input type="text" name="skinthickness" placeholder="SkinThickness" required="true">
+  <input type="text" name="insulin" placeholder="Insulin" required="true">
+  <input type="text" name="bmi" placeholder="BMI" required="true">
+  <input type="text" name="dpf" placeholder="DiabetesPedigreeFunction" required="true">
+  <input type="text" name="age" placeholder="Age" required="true">
   <input type="submit" name="" value="✅Check Report">
 </form>
 
